@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MessageWindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4F4FD9"
+    android:padding="8dp"
+    android:orientation="vertical"
+    tools:context=".ChatActivity">
+
+    <ListView
+        android:id="@+id/ListMessages"
+        android:divider="@android:color/transparent"
+        android:layout_above="@+id/LayoutSendMassage"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/message_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/LayoutSendMassage"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:background="@drawable/ic_insert_photo_black_24dp"
+                android:id="@+id/SentPhotoImageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <EditText
+                android:id="@+id/EditTextMessage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/ButtonSendMessage"
+                android:enabled="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="send" />
+        </LinearLayout>
+
+</RelativeLayout>
